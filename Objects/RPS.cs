@@ -16,6 +16,8 @@ namespace RockPaperScissor.Objects
       _name = name;
       _randint = rnd.Next(1, 4);  //1 <= randint < 4
       _hand = ShowHand(_randint);   //_hand = rock or paper or scissor
+      _listPlayer.Add(this);
+      
     }
     public string GetName()
     {
@@ -28,6 +30,10 @@ namespace RockPaperScissor.Objects
     public int GetRnd()
     {
       return _randint;
+    }
+    public static List<RPS> ShowPlayers()
+    {
+      return _listPlayer;
     }
     //Return the correspondent hand{rock, paper, scissor} based on random number from 1 - 3
     public string ShowHand(int randomNumber)

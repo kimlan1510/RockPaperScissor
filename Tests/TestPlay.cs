@@ -21,12 +21,14 @@ namespace RockPaperScissor.Objects
       {
         //Arrange
         RPS player1 = new RPS("bob");
+        RPS player2 = new RPS("bill");
+
 
         //Act
-        string displayHand = player1.GetHand();
-
+        string displayHand1 = player1.GetHand();
+        string displayHand2 = player2.GetHand();
         //Assert
-        Assert.Equal("Rock", displayHand);
+        Assert.Equal(displayHand1, displayHand2);
       }
 
 
