@@ -15,17 +15,12 @@ namespace RockPaperScissor.Objects
     {
       _name = name;
       _randint = rnd.Next(1, 4);  //1 <= randint < 4
-      _hand = ShowHand(_randint);   //_hand = rock or paper or scissor
       _listPlayer.Add(this);
-      
+
     }
     public string GetName()
     {
       return _name;
-    }
-    public string GetHand()
-    {
-      return _hand;
     }
     public int GetRnd()
     {

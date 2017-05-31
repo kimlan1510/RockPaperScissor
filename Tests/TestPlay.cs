@@ -25,10 +25,12 @@ namespace RockPaperScissor.Objects
 
 
         //Act
-        string displayHand1 = player1.GetHand();
-        string displayHand2 = player2.GetHand();
+        string displayHand1 = player1.ShowHand(player1.GetRnd());
+        string displayHand2 = player2.ShowHand(player2.GetRnd());
         //Assert
         Assert.Equal(displayHand1, displayHand2);
+        // Assert.Equal("rock", displayHand1);
+        // Assert.Equal("rock", displayHand2);
       }
 
 
